@@ -6,7 +6,7 @@ from beem.comment import Comment
 # 1. Configuration variables
 MY_ACCOUNT = "gikunju"  # Your Steem account name
 TARGET_COMMUNITY = "hive-129948"  
-CUSTOM_TAGS = ["steemexclusive", "amarbanglablog", "general-writing", "krsuccess"]
+CUSTOM_TAGS = ["steemexclusive", "amarbanglablog", "general-writing", "art", "meme", "trc-20", "sunpump", "puss", "krsuccess"]
 
 # The specific account receiving 100% of the rewards
 REWARD_RECIPIENT = "bnwt"  
@@ -38,8 +38,8 @@ now_eat = datetime.datetime.utcnow() + datetime.timedelta(hours=3) # UTC to EAT
 formatted_date = generate_custom_date(now_eat)
 
 # Content structure in Bangla
-post_title = f"ধন্য দিন or শুভ ও বরকতময় দিন! - {formatted_date}"
-post_body = f"আমি ধন্য বোধ করছি। {formatted_date}\n\nhttps://cdn.steemitimages.com/DQmVu7jSrYFYn7g1ije1dHEBJhJU1bXJHvpj22NECYDLw86/1000022175.jpg"
+post_title = f"চাঁদের পথে পুস 🌙"
+post_body = f"Puss কিনুন এবং HODL করুন! 💌\n\nhttps://cdn.steemitimages.com/DQmYjwMKWAdVvPZU2kMrVRVkLxs81YZvP4mK8RzdNoGoA69/1000022553.jpg"
 
 # Consistent permalink structure mapping
 post_permlink = f"daily-blessing-{now_eat.strftime('%Y%m%d%H%M')}"
