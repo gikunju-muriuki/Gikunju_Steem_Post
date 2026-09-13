@@ -6,7 +6,7 @@ from beem.comment import Comment
 # 1. Configuration variables
 MY_ACCOUNT = "gikunju"  # Your Steem account name
 TARGET_COMMUNITY = "hive-129948"  
-CUSTOM_TAGS = ["steemexclusive", "amarbanglablog", "general-writing", "art", "meme", "trc-20", "sunpump", "puss", "krsuccess"]
+CUSTOM_TAGS = ["general-writing", "art", "meme", "trc-20", "sunpump", "puss", "krsuccess"]
 
 # The specific account receiving 100% of the rewards
 REWARD_RECIPIENT = "bnwt"  
