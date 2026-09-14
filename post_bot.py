@@ -38,8 +38,8 @@ now_eat = datetime.datetime.utcnow() + datetime.timedelta(hours=3) # UTC to EAT
 formatted_date = generate_custom_date(now_eat)
 
 # Content structure in Bangla
-post_title = f"চাঁদের পথে পুস 🌙"
-post_body = f"Puss কিনুন এবং HODL করুন! 💌\n\nhttps://cdn.steemitimages.com/DQmYjwMKWAdVvPZU2kMrVRVkLxs81YZvP4mK8RzdNoGoA69/1000022553.jpg"
+post_title = f"চাঁদের পথে Puss 🌙"
+post_body = f"💌Puss কিনুন এবং HODL করুন!💌\n\nhttps://cdn.steemitimages.com/DQmYjwMKWAdVvPZU2kMrVRVkLxs81YZvP4mK8RzdNoGoA69/1000022553.jpg"
 
 # Consistent permalink structure mapping
 post_permlink = f"daily-blessing-{now_eat.strftime('%Y%m%d%H%M')}"
