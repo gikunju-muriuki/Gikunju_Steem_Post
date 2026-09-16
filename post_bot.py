@@ -62,17 +62,17 @@ ARTICLES_POOL = {
     },
     7: {
         "title": "The Overlooked Value of Practicing Active Listening",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmQGDp82f2ztJdeQBab5DGQjC3h2f45g1eTLsxefkaHfMZ/1000022729.jpg",
         "body": "Most people do not listen to understand what is being said; they listen primarily to formulate their next response. Meaningful connection and deep collaboration occur when we silence our internal monologues and focus entirely on the speaker.\n\nIn your conversations today, challenge yourself to let others finish their thoughts completely before you speak. Ask meaningful follow-up questions instead of instantly steering the topic back to your own stories."
     },
     8: {
         "title": "Learning to Say No with Ultimate Confidence and Grace",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmXa5dCN3KQkd6LB1QoMEEz6FD7W1ZAZ8eLLcDb17HJuAG/1000022730.jpg",
         "body": "Every time you agree to a non-essential commitment, you are automatically declining your own top priorities. People-pleasing might seem helpful in the moment, but it ultimately creates resentment and severe personal burnout.\n\nWhen someone requests your time today, check your true bandwidth before offering an answer. It is completely acceptable to give a polite, honest refusal to protect your focus for your primary obligations."
     },
     9: {
         "title": "Overcoming Procrastination by Simplifying the First Step",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmeLSRCMrf12Yf4GDvfmFCcQBoYMwpbH9AHuiE594GQEn4/1000022735.jpg",
         "body": "Delaying tasks is rarely caused by laziness; it is usually an emotional management tool for a project that feels intimidating. When a responsibility seems too large, our minds naturally search for quick distractions to bypass the discomfort.\n\nTo beat the overwhelm, divide your toughest task today into a step so ridiculously small that it takes almost zero willpower. Commit to working on just that single micro-step for five minutes, and watch the initial friction fade away."
     },
     10: {
