@@ -8,7 +8,7 @@ from beem.comment import Comment
 # ==========================================
 MY_ACCOUNT = "gikunju"  
 TARGET_COMMUNITY = "hive-129948"  
-CUSTOM_TAGS = ["amarbanglablog", "art", "meme", "trc-20", "sunpump", "puss", "krsuccess"]
+CUSTOM_TAGS = ["blog", "article", "writing", "krsuccess"]
 REWARD_RECIPIENT = "bnwt"
 custom_beneficiaries = [
     {'account': REWARD_RECIPIENT,
