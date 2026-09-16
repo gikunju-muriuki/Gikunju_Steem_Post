@@ -107,22 +107,22 @@ ARTICLES_POOL = {
     },
     16: {
         "title": "The Direct Connection Between Sleep and Daily Success",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmQYHSVgZXyPRf3DkmH4fhN2UxzYXECHrPY9aNmoecoUtp/1000022745.jpg",
         "body": "Sacrificing sleep to squeeze out more working hours is a common trap that quickly derails your mental processing speed. Ongoing sleep deprivation damages your mood, dampens creative thinking, and triggers costly errors in decision-making.\n\nCommit to a calming evening wind-down routine tonight by stowing away electronic devices thirty minutes before turning off the lights. Prioritizing deep rest ensures you meet tomorrow with full focus and physical vitality."
     },
     17: {
         "title": "The Life-Changing Magic of Keeping a Workspace Clean",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmdmgySircAzDEYKSjBXNngcN8h4ZAXpPuwbGVK5213Skh/1000022747.jpg",
         "body": "A physical environment crowded with stray notes, dirty mugs, and scattered items creates a continuous, underlying cognitive strain. It forces your brain to waste energy filtering out visual noise, which actively reduces your memory capacity.\n\nBefore launching into your core projects today, clear everything off your desk except the absolute necessities. You will instantly feel a lighter mental load and find it much easier to lock into deep focus blocks."
     },
     18: {
         "title": "Decluttering Your Digital Environment for Mental Clarity",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmZ6HhAtrnLFt8uZnhHrD5pK3BCfdby7WTmAJSEqfxDXDH/1000022746.jpg",
         "body": "A chaotic digital setup can trigger just as much background anxiety and split-second distraction as a messy physical desk. Overloaded inboxes, unorganized desktop folders, and constant pings fragment your cognitive attention.\n\nTake ten minutes today to unsubscribe from lists you no longer read and archive old files. A streamlined digital ecosystem brings immediate mental clarity and allows your daily tasks to flow much more seamlessly."
     },
     19: {
         "title": "The Subtle Art of Protecting Your Personal Energy",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmbpL2E8WrRzTfAvTKtVCqzr342PvxG5BVnbeFiBzxcArU/1000022748.jpg",
         "body": "Your time and emotional capacity are strictly limited resources that must be managed with absolute intent every day. Defaulting to a 'yes' for every request or taking on other people's complaints leaves you empty-handed for your own life.\n\nPractice establishing polite but firm boundaries today regarding your schedule and mental availability. Guarding your internal peace ensures you can bring your highest, most authentic effort to the things that truly matter."
     },
     20: {
