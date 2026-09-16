@@ -97,12 +97,12 @@ ARTICLES_POOL = {
     },
     14: {
         "title": "The Ripple Effect of Small Acts of Kindness",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmRiHkZBbXVHZJzwG4eQ3nAuefdr2mVBfNYqcCGDGY8AkK/1000022741.jpg",
         "body": "We often assume we need to execute grand, costly gestures to make a difference in the lives of those around us. In reality, a genuine compliment, holding a door, or sending an encouraging note can completely pivot someone's afternoon.\n\nMake it a point to offer one unexpected token of kindness or validation to someone today. These small gestures build a wonderful ripple effect, boosting both the recipient's mood and your own internal happiness."
     },
     15: {
         "title": "Building Resilience Against Life's Unexpected Hurdles",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmXLBKSTMUPjy8RbTBpG5B5YRjceTEavg2qe2YWhMh3CjK/1000022740.jpg",
         "body": "Disruptions and sudden changes are entirely inevitable, but our psychological reaction to them remains completely within our hands. Building true resilience isn't about ignoring difficulties; it is about mastering the art of adapting and bouncing back quickly.\n\nWhen a small annoyance happens today, step back and ask yourself if this issue will matter in a month. Shifting your timeline perspective instantly drops stress levels and helps you solve problems with a collected, rational mind."
     },
     16: {
