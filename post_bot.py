@@ -32,17 +32,17 @@ if not MY_PRIVATE_POSTING_KEY:
 ARTICLES_POOL = {
     1: {
         "title": "How Embracing Constraints Fuels Real Innovation",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmf1CNJXC5n5K3BgnajpKjQz52uUHwRxSY5PCWXRDeVfcz/1000022723.jpg",
         "body": "We frequently complain about boundaries like tight budgets, restricted schedules, or minimal materials when tackling a project. However, complete freedom can lead to creative paralysis, whereas clear limitations demand that we think resourcefully.\n\nInstead of viewing your current limitations as an obstacle today, treat them as a creative playground. Let your lack of resources inspire you to find a completely unique, highly inventive path forward."
     },
     2: {
         "title": "Finding Deep Creative Inspiration in Quiet Spaces",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmPsxUrdtCke3wV59GfQVaZD1V3FbVjVE4zoGG6UEygE8y/1000022724.jpg",
         "body": "Fresh ideas rarely surface when our minds are constantly flooded with notifications, errands, and continuous digital noise. True breakthroughs generally happen during the quiet, unstructured moments of our day when our thoughts are free to wander.\n\nStep away from your workstation today and go for a short walk without headphones or your phone. Allow your environment to fill your senses naturally, and you may be surprised by the fresh perspectives that suddenly emerge."
     },
     3: {
         "title": "The Strategic Value of Conducting Regular Self-Reviews",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmcGEd82avNGh8tryVmhUQQUPKU1bM8ZdHyBknhmkMb4TL/1000022725.jpg",
         "body": "It is incredibly easy to stay endlessly active while inadvertently moving in completely the wrong direction. Without routine periods of reflection, we tend to repeat ineffective behaviors and lose sight of our core targets.\n\nDedicate a brief window at the end of this week to evaluate what went well and what felt draining. Use these lessons to fine-tune your schedule, ensuring your daily efforts remain aligned with your core values."
     },
     4: {
