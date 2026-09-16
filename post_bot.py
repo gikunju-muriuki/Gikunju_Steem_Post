@@ -127,7 +127,7 @@ ARTICLES_POOL = {
     },
     20: {
         "title": "Embracing the Uncomfortable Journey of Personal Growth",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmUGitjCC6k85TKvP4X6Yr7i4nkFhoqUaGTvMKLU4DGVNP/1000022749.jpg",
         "body": "Genuine personal development never takes place within the safe, predictable borders of our comfort zones. Real improvement demands that we step out into the awkward, uncertain territory where failure and education live side by side.\n\nIdentify one task or hard talk you have been avoiding because it feels intimidating or uncomfortable. Face it head-on today, recognizing that moving through brief discomfort is exactly how you stretch your capabilities."
     },
     21: {
