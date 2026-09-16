@@ -77,12 +77,12 @@ ARTICLES_POOL = {
     },
     10: {
         "title": "The Crucial Balance Between Hard Work and Rest",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmZkjJBm7UzYMXUHNapZfAKgBUUNjafUdk5USpC4pKu4et/1000022736.jpg",
         "body": "Our culture heavily praises the non-stop grind, but constant exhaustion is never a reliable formula for true success. Rest is not a reward you must earn only after burning out; it is a structural requirement for sustained high performance.\n\nTreat your recovery time with the exact same priority you give to your most critical business meetings. Block out an hour this evening strictly for unwinding, allowing your mind and body to genuinely restore."
     },
     11: {
         "title": "Cultivating Mindful Awareness in a Busy World",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmeYsVqFPBwsvfueqrCitdEUaD8puAXEQtr9g67B82Waf7/1000022737.jpg",
         "body": "Modern life constantly splits our attention in a thousand directions, leaving us feeling fragmented and depleted. Cultivating awareness doesn't require sitting in isolation for hours; it simply means being completely anchored where you are right now.\n\nTry eating your next meal or enjoying your beverage without checking a digital screen. Pay attention to the textures, temperatures, and flavors, offering your nervous system a critical moment to relax and reset."
     },
     12: {
