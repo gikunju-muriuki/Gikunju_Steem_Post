@@ -42,8 +42,8 @@ ARTICLES_POOL = {
     },
     3: {
         "title": "The Strategic Value of Conducting Regular Self-Reviews",
-        "image": "https://cdn.steemitimages.com/DQmcGEd82avNGh8tryVmhUQQUPKU1bM8ZdHyBknhmkMb4TL/1000022725.jpg",
-        "body": "It is incredibly easy to stay endlessly active while inadvertently moving in completely the wrong direction. Without routine periods of reflection, we tend to repeat ineffective behaviors and lose sight of our core targets.\n\nDedicate a brief window at the end of this week to evaluate what went well and what felt draining. Use these lessons to fine-tune your schedule, ensuring your daily efforts remain aligned with your core values."
+        "image": "https://cdn.steemitimages.com/DQmUbhESnfPcxdtV2j3fsEXFCpHQbz7NK2osPdbvJBnruUy/1000022750.jpg",
+        "body": "It is easy to stay constantly busy while drifting away from your true goals. Without regular moments of reflection, we often repeat unproductive habits and lose sight of our primary targets. Take a short time at the end of this week to review your wins and energy drains. Use these insights to adjust your schedule and keep your daily actions aligned with your core values."
     },
     4: {
         "title": "Embracing Fresh Beginnings and New Opportunities",
