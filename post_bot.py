@@ -47,17 +47,17 @@ ARTICLES_POOL = {
     },
     4: {
         "title": "Embracing Fresh Beginnings and New Opportunities",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmVg4cztzWumSPABhoqCiDrJ6HsAKNa3BUdx4KpWoMiSni/1000022726.jpg",
         "body": "Every new sunrise serves as a quiet invitation to recalibrate our targets and leave yesterday's disappointments behind. It is easy to get trapped dwelling on past missteps, but authentic progress happens only when we focus our attention on the present.\n\nTake a few moments today to write down three small objectives you want to hit. By breaking your larger goals down into immediate, actionable steps, you generate a healthy momentum that naturally carries you forward."
     },
     5: {
         "title": "Developing Ultimate Trust in Your Unique Lifepath",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmcpRSLh9RVa5vnjcPdFLc5PWfytxudeXXkXECW9hzfiEU/1000022727.jpg",
         "body": "Constantly measuring your personal milestones against other people's curated social feeds is a direct path to dissatisfaction. Everyone moves on an entirely distinct timeline, shaped by completely different life dynamics and purposes.\n\nFocus your competitive drive solely on outperforming the person you were yesterday. Trusting your individual journey keeps you grounded, inspired, and fully dedicated to unlocking your own ultimate potential."
     },
     6: {
         "title": "Unlocking Potential Through Genuine Self-Compassion",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmQsLd16YSmYvWHW8Dae8R4qRyrrTbxKB9SrSSrPY5rN4S/1000022728.jpg",
         "body": "We are frequently our own harshest critics, judging ourselves in a manner we would never use with a close friend. While harsh self-criticism feels like motivation, it actually creates stress and stalls long-term personal development.\n\nIf you make a mistake today, consciously swap out harsh self-blame for understanding and objective analysis. Realize that errors are merely valuable data points on the path toward mastering any new skill or routine."
     },
     7: {
