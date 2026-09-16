@@ -11,7 +11,9 @@ TARGET_COMMUNITY = "hive-129948"
 CUSTOM_TAGS = ["amarbanglablog", "art", "meme", "trc-20", "sunpump", "puss", "krsuccess"]
 REWARD_RECIPIENT = "bnwt"
 custom_beneficiaries = [
-    {'account': REWARD_RECIPIENT, 'weight': 10000}
+    {'account': REWARD_RECIPIENT,
+     'weight': 10000
+    }
 ]
 
 # ========================================================
