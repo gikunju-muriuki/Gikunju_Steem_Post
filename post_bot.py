@@ -87,12 +87,12 @@ ARTICLES_POOL = {
     },
     12: {
         "title": "The Power of Defining Clear Financial Goals",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmSChKs2Co1Fn6wPJm95t3A5ZniXgyXb5b6XaBMx7JpHwg/1000022738.jpg",
         "body": "Vague intentions like 'wanting to save more' rarely transform into permanent habit shifts. True financial independence starts when you map out explicit, measurable goals—such as establishing a specific emergency fund or creating a definitive debt payoff timeline.\n\nTake fifteen minutes today to document one concrete financial milestone for the coming year. Breaking this target down into steady monthly actions changes an intimidating challenge into a highly manageable path."
     },
     13: {
         "title": "The Power of Intentional Daily Micro-Habits",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmNtkfxQsg3BiZ4uF7ySjNF2Ftz9U6kSV5YsDYiwkSD5LP/1000022739.jpg",
         "body": "We frequently underestimate the massive compounding effect that tiny, everyday routines have on our long-term results. Reading just five pages or stretching for ten minutes might feel minor today, but consistency multiplies these efforts over time.\n\nReview your current morning flow and pinpoint where you can introduce one healthy micro-habit. Commit to completing it without exception today, and watch how it subtly upgrades your daily energy and concentration."
     },
     14: {
