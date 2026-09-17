@@ -168,27 +168,27 @@ ARTICLES_POOL = {
     },
     28: {
         "title": "The Loneliness Epidemic and the Need for Connection",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmbr6V4U3asQ6mYdLcSwqjsRAy35iBBCJHHtfEtwu4gYCv/1000022898.jpg",
         "body": "Despite being more digitally linked than any prior generation, an incredible number of people report feeling profoundly isolated. Social network comments function as a superficial substitute for raw, authentic human bonds.\n\nReach out to an old teammate or a family member today with a direct phone call or a thoughtful text. Spending a few minutes tending to your personal support circle pays massive dividends for your mental health."
     },
     29: {
         "title": "Cultivating Patience in an Era of Instant Gratification",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmYcw5ABCfZtb5KWDWuBs1DWNFzkk6qkitwd3jDFPsAtS9/1000022899.jpg",
         "body": "We exist in an on-demand ecosystem where rapid delivery, live streams, and instant notifications have skewed our expectations. Because trivial things show up instantly, we incorrectly assume major personal updates should materialize overnight too.\n\nRemind yourself today that life-changing achievements like career expertise, deep relationships, and wellness take time. Welcome the slow, steady progress and practice patience when rewards require time to grow."
     },
     30: {
         "title": "The Invaluable Strength of True Emotional Maturity",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmNRTYJsrwEKdQnif2dhtfrhbK7EdSidhq24vjEfVJZr2y/1000022900.jpg",
         "body": "Emotional maturity shows up in the critical space between feeling an intense response and picking your actual behavior. Snapping out of immediate anger or irritation almost always makes an already tense situation far worse.\n\nWhen someone tests your limits today, take a full, deliberate breath before saying a word. Mastering your initial reflex empowers you to handle the problem logically and defuse friction without drama."
     },
     31: {
         "title": "Cultivating Genuine Gratitude During Difficult Times",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmXkbscjTP8B1ViufoQkXb7hPXMudmCYW5XvorPmTrTurU/1000022901.jpg",
         "body": "Building a practice of gratitude is not about forcing positive thinking or overlooking the heavy trials in your life. It is simply about deliberately training your mind to appreciate the good things that exist right alongside the struggles.\n\nBefore turning in tonight, write down three specific moments that brought a smile to your face today. Shifting your focus to what is going right actively lowers stress markers and directly upgrades your sleep quality."
     },
     32: {
         "title": "Shifting Focus From Final Outcomes to Daily Systems",
-        "image": "steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmNY2m814jmnkxsSCBiUxWMWvjEoTfC779hMTRKxwa3Nbo/1000022902.jpg",
         "body": "Obsessing completely over a distant destination can leave you feeling frustrated by how much further you still have to travel. Top performers and those who miss the mark often share identical goals; it is the daily operational system that sets them apart.\n\nForget about the ultimate finish line for a second and focus fully on handling your routine excellently today. Trust that if your daily systems are robust, the milestones will naturally take care of themselves."
     }
     }
