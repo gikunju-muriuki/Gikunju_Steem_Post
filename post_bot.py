@@ -133,37 +133,37 @@ ARTICLES_POOL = {
     },
     21: {
         "title": "Celebrating Your Incremental Progress Over Time",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmNPWeKYfXwZ955fw4dQiub7oMbpLoaZFi3T58rk5DSYN3/1000022890.jpg",
         "body": "We are often so intensely focused on the distant mountain peak that we neglect to look back and see how much ground we have already covered. Ignoring your milestones turns the self-improvement journey into an endless, exhausting chore.\n\nTake a brief pause today to acknowledge a skill or routine you handle with ease now that used to trip you up last year. Validating your own evolution builds the deep internal confidence required to take on your next major challenge."
     },
     22: {
         "title": "How Physical Movement Boosts Daily Brain Power",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmRZeHVEiA7sPd6xnRb2MQwpSpFkXy6ML1uSSJgS7S4Tve/1000022891.jpg",
         "body": "Our bodies and minds operate as a deeply tied, single system that constantly drives overall performance. Sitting entirely still at a desk for hours cuts down on blood circulation to the brain, inducing foggy thinking and midday fatigue.\n\nBreak up your stationary blocks today by standing to stretch or pacing around the room every single hour. Even a quick two minutes of movement re-oxygenates your body, instantly sharpening your focus, mood, and output."
     },
     23: {
         "title": "Developing a Grounded Perspective on Perfectionism",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmZF7mMYWQZc6Gdwu5kgvjvap5ZjdTex9gwxMZLkvhtA5Q/1000022892.jpg",
         "body": "Perfectionism is usually just a beautiful mask for deep-seated fear—fear of being judged, failing, or falling short. Demanding perfection freezes projects indefinitely, locking you away from helpful real-world testing and growth.\n\nSet your sights on excellent execution rather than flawless perfection in your tasks today. Keep in mind that a completed piece of work out in the world is infinitely more useful than a flawless project hidden away in a draft folder."
     },
     24: {
         "title": "Curating Your Mind's Daily Information Diet",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmRnLcZGUtJizZMMAiaZuRzjkuPrjx9PMfTdVGXLAWvvfD/1000022893.jpg",
         "body": "Just like the nutrition we choose determines our physical health, the media we absorb defines our psychological balance. Regularly taking in over-dramatized news and hostile social timelines triggers a stressed, uneasy outlook on life.\n\nTake a realistic look at the accounts and platforms you open most often during the week. Swap out at least one unhelpful source for educational channels, constructive essays, or supportive communities."
     },
     25: {
         "title": "Nurturing Professional Growth Through Active Learning",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmNqyJzQJ2jdh2rhoGRbrxMbdR1uvLSqMNb7ECSMD2UjGE/1000022895.jpg",
         "body": "The landscapes of industry and technology shift so quickly that static skillsets rapidly become outdated. Staying dedicated to consistent learning is the absolute best safety policy for your career future and individual growth.\n\nFind a short educational post, podcast episode, or tutorial walkthrough tied to your industry today. Invest just fifteen minutes into absorbing that information and think about how to apply it directly to your current tasks."
     },
     26: {
         "title": "Finding Deep Fulfillment in Simple Daily Pleasures",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmV66f4VMUTd1sfuaCC3vvo87JxKqdJE2wWekd1BSjittC/1000022896.jpg",
         "body": "It is remarkably easy to pass through life waiting for massive milestones to finally permit ourselves to feel happy. However, authentic lifestyle satisfaction is actually constructed by capturing and enjoying small, everyday moments of peace.\n\nWhether it is the touch of morning sun, a great blend of coffee, or an easy laugh with a teammate, step into it. Pause for ten seconds to truly value these basic pleasures as they arrive during your afternoon."
     },
     27: {
         "title": "Unlocking Creative Solutions Through Critical Thinking",
-        "image": "https://steemitimages.com",
+        "image": "https://cdn.steemitimages.com/DQmaGnuZhcXFeUVmVam7fip3XJLY8tBTBbzL6r8nUambp8n/1000022897.jpg",
         "body": "When hit by an unexpected problem, our automatic reflex is often to worry or fall back on old, tired routines. Critical thinking means pulling back, identifying hidden assumptions, and evaluating the core problem from fresh perspectives.\n\nIf you encounter a roadblock today, do not just attempt to smash through it using the exact same methods. Ask yourself how an outsider would navigate this issue, and look for a more efficient, creative shortcut."
     },
     28: {
