@@ -29,7 +29,7 @@ try:
     
     # Stream live operations on the blockchain
     # 'comment' operations include both root posts and replies
-    for op in blockchain.stream(opNames=["comment"], threading=False, no_dispatch=False):
+    for op in blockchain.stream(opNames=["comment"], threading=False):
         try:
             # Filter for root posts only (parent_author is empty for main posts)
             if op.get("parent_author") == "":
