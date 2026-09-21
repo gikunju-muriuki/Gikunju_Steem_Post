@@ -6,9 +6,13 @@ from beem.discussions import Discussions_by_created
 
 # 1. Configuration
 MY_ACCOUNT = "blog.god"            # Your Steem account name
-VOTE_WEIGHT = 3                 # Upvote weight (1 to 100)
+VOTE_WEIGHT = 3                   # Strategically hardcoded to 3% for high-volume growth
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
+
+# TARGET TAGS: The script will only look at posts containing any of these tags
+# Tip: Use lowercase names as tags are indexed in lowercase format
+TARGET_TAGS = ["steemitchallenge", "newcomers", "steemexclusive", "art", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
 
 # 2. Extract Key from GitHub Secrets
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
@@ -23,9 +27,9 @@ try:
     
     print("Fetching the latest posts globally from the blockchain history...")
     
-    # Instantly query the latest 20 created posts on the network
-    # We use a limit of 20 to ensure we find posts older than 5.3 minutes
-    query = {"limit": 20, "tag": ""}
+    # We increase the history batch slightly (limit: 50) to make sure we find 
+    # posts that match both our age constraint AND our custom tags
+    query = {"limit": 70, "tag": ""}
     discussions = Discussions_by_created(query, blockchain_instance=stm)
     
     upvote_done = False
@@ -35,12 +39,22 @@ try:
         permlink = post.get("permlink")
         identifier = f"@{author}/{permlink}"
         
+        # --- TAG FILTER LOGIC ---
+        # Metadata contains the tags array assigned by the author
+        post_tags = post.get("tags", [])
+        
+        # Check if there is an intersection between target tags and post tags
+        matching_tags = [t for t in post_tags if t.lower() in TARGET_TAGS]
+        
+        if not matching_tags:
+            # Skip this post silently if it doesn't match our specific tags
+            continue
+            
         # Calculate the post age dynamically (using aware UTC datetimes)
         post_creation = post.get("created")
         if not post_creation:
             continue
             
-        # Ensure post_creation is UTC aware
         if post_creation.tzinfo is None:
             post_creation = post_creation.replace(tzinfo=timezone.utc)
             
@@ -49,10 +63,10 @@ try:
         
         # 1. Check if the post meets your age condition (> 5.3 minutes)
         if age_seconds < AGE_THRESHOLD_SECONDS:
-            print(f"Skipping {identifier}: Post is too new ({age_seconds / 60:.1f} mins old).")
+            print(f"Skipping {identifier}: Matches tags {matching_tags} but is too new ({age_seconds / 60:.1f} mins old).")
             continue
             
-        print(f"Target found! Post {identifier} is {age_seconds / 60:.1f} minutes old.")
+        print(f"Target found! Post {identifier} matches tags {matching_tags} and is {age_seconds / 60:.1f} minutes old.")
         
         # 2. Safely pull active voters
         voters = []
@@ -66,16 +80,15 @@ try:
         # 3. Execute the upvote
         print(f"Upvoting {identifier} with {VOTE_WEIGHT}% power...")
         
-        # Re-instantiate as a Comment object to ensure clean signing capabilities
         target_comment = Comment(identifier, blockchain_instance=stm)
         target_comment.upvote(weight=VOTE_WEIGHT, voter=MY_ACCOUNT)
         print("Upvote successfully broadcasted.")
         
         upvote_done = True
-        break  # Exit the loop immediately after one successful upvote
+        break  # Exit the script after one successful upvote event
 
     if not upvote_done:
-        print("No matching posts older than 5.3 minutes were found in the recent history batch.")
+        print("No posts matching your target tags and age threshold were found in this history batch.")
 
 except Exception as e:
     print(f"CRITICAL ERROR: {e}")
