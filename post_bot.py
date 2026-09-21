@@ -1,13 +1,13 @@
 import os
 import time
-from datetime import datetime, timezone
+from datetime import datetime
 from beem import Steem
 from beem.blockchain import Blockchain
 from beem.comment import Comment
 
 # 1. Configuration
-MY_ACCOUNT = "blog.god"            # Your Steem account name
-VOTE_WEIGHT = 3                 # Upvote weight (1 to 100)
+MY_ACCOUNT = "gikunju"            # Your Steem account name
+VOTE_WEIGHT = 100                 # Upvote weight (1 to 100)
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
 
@@ -25,11 +25,12 @@ try:
     # Instantiate the global blockchain stream
     blockchain = Blockchain(blockchain_instance=stm)
     
-    print("Monitoring Steem blockchain for the latest posts...")
+    # FIX: Get the latest block number so we don't start from historical block #1
+    current_block = blockchain.get_current_block_num()
+    print(f"Monitoring Steem blockchain starting from live block #{current_block}...")
     
-    # Stream live operations on the blockchain
-    # 'comment' operations include both root posts and replies
-    for op in blockchain.stream(opNames=["comment"], threading=False):
+    # Stream live operations starting from the current head block
+    for op in blockchain.stream(opNames=["comment"], start=current_block, threading=False):
         try:
             # Filter for root posts only (parent_author is empty for main posts)
             if op.get("parent_author") == "":
@@ -41,7 +42,6 @@ try:
                 post = Comment(identifier, blockchain_instance=stm)
                 
                 # Calculate the post age dynamically
-                # beem provides 'created' as a naive datetime in UTC
                 post_creation = post.get("created")
                 if not post_creation:
                     continue
