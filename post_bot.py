@@ -12,7 +12,7 @@ AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
 
 # TARGET TAGS: The script will only look at posts containing any of these tags
 # Tip: Use lowercase names as tags are indexed in lowercase format
-TARGET_TAGS = ["steemitchallenge", "newcomers", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
+TARGET_TAGS = ["steemitchallenge", "newcomers", "creativity", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
 
 # 2. Extract Key from GitHub Secrets
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
