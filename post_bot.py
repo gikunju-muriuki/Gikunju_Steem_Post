@@ -6,8 +6,8 @@ from beem.blockchain import Blockchain
 from beem.comment import Comment
 
 # 1. Configuration
-MY_ACCOUNT = "gikunju"            # Your Steem account name
-VOTE_WEIGHT = 100                 # Upvote weight (1 to 100)
+MY_ACCOUNT = "blog.god"            # Your Steem account name
+VOTE_WEIGHT = 3                 # Upvote weight (1 to 100)
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
 
