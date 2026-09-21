@@ -6,7 +6,7 @@ from beem.discussions import Discussions_by_created
 
 # 1. Configuration
 MY_ACCOUNT = "blog.god"            # Your Steem account name
-VOTE_WEIGHT = 3                   # Strategically hardcoded to 3% for high-volume growth
+VOTE_WEIGHT = 1                   # Strategically hardcoded to 3% for high-volume growth
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
 
