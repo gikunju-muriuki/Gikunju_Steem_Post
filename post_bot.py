@@ -11,7 +11,7 @@ VOTE_WEIGHT = 1                   # Strategically hardcoded to 3% for high-volum
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 random_minutes = random.uniform(5.1, 25.0)
 AGE_THRESHOLD_SECONDS = random_minutes * 60
-print(f"Dynamic Curation Mode: Looking for posts older than {random_minutes:.1f} minutes...")
+print(f"Looking for posts older than {random_minutes:.1f} minutes but younger than 25.0 minutes.")
 
 # TARGET_TAGS: The script will only look at posts containing any of these tags
 # Tip: Use lowercase names as tags are indexed in lowercase format
