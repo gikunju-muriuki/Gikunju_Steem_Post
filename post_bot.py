@@ -28,7 +28,22 @@ try:
     print(f"Connecting to node via proxy: {PROXY_URL}")
     stm = Steem(node=[PROXY_URL], keys=[MY_PRIVATE_POSTING_KEY])
     
+    # =========================================================================
+    # LIVE VOTING POWER SAFETY CHECK 
+    # =========================================================================
+    from beem.account import Account
+    account_info = Account(MY_ACCOUNT, blockchain_instance=stm)
+    current_vp = account_info.get_voting_power()
+    
+    print(f"Account @{MY_ACCOUNT} live Voting Power: {current_vp:.2f}%")
+    
+    if current_vp < 80.0:
+        print(f"⚠️ Safety Halt: Voting Power is too low ({current_vp:.2f}%). Skipping vote execution to recharge energy.")
+        exit(0)
+    # =========================================================================
+    
     print("Fetching the latest posts globally from the blockchain history...")
+
     
     # We increase the history batch slightly (limit: 50) to make sure we find 
     # posts that match both our age constraint AND our custom tags
