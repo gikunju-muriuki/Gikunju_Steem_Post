@@ -1,4 +1,5 @@
 import os
+import random
 from datetime import datetime, timezone
 from beem import Steem
 from beem.comment import Comment
@@ -8,9 +9,11 @@ from beem.discussions import Discussions_by_created
 MY_ACCOUNT = "blog.god"            # Your Steem account name
 VOTE_WEIGHT = 1                   # Strategically hardcoded to 3% for high-volume growth
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
-AGE_THRESHOLD_SECONDS = 5.3 * 60  # 5.3 minutes = 318 seconds
+random_minutes = random.uniform(5.1, 25.0)
+AGE_THRESHOLD_SECONDS = random_minutes * 60
+print(f"Dynamic Curation Mode: Looking for posts older than {random_minutes:.1f} minutes...")
 
-# TARGET TAGS: The script will only look at posts containing any of these tags
+# TARGET_TAGS: The script will only look at posts containing any of these tags
 # Tip: Use lowercase names as tags are indexed in lowercase format
 TARGET_TAGS = ["steemitchallenge", "newcomers", "creativity", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
 
