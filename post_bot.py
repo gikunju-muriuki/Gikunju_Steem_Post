@@ -29,18 +29,30 @@ try:
     stm = Steem(node=[PROXY_URL], keys=[MY_PRIVATE_POSTING_KEY])
     
     # =========================================================================
-    # LIVE VOTING POWER SAFETY CHECK 
+    # LIVE VOTING POWER & RESOURCE CREDIT SAFETY CHECKS
     # =========================================================================
     from beem.account import Account
     account_info = Account(MY_ACCOUNT, blockchain_instance=stm)
-    current_vp = account_info.get_voting_power()
     
+    # 1. Fetch Voting Power
+    current_vp = account_info.get_voting_power()
     print(f"Account @{MY_ACCOUNT} live Voting Power: {current_vp:.2f}%")
     
+    # 2. Fetch Resource Credits Percentage
+    rc_manabar = account_info.get_rc_manabar()
+    current_rc = (rc_manabar['current_mana'] / rc_manabar['max_mana']) * 100
+    print(f"Account @{MY_ACCOUNT} live Resource Credits: {current_rc:.2f}%")
+    
+    # 3. Enforce Safeguards
     if current_vp < 80.0:
-        print(f"⚠️ Safety Halt: Voting Power is too low ({current_vp:.2f}%). Skipping vote execution to recharge energy.")
+        print(f"⚠️ Safety Halt: Voting Power is too low ({current_vp:.2f}%). Skipping execution.")
+        exit(0)
+        
+    if current_rc < 75.0:
+        print(f"⚠️ Safety Halt: Resource Credits are too low ({current_rc:.2f}%). Skipping execution to avoid transaction failure.")
         exit(0)
     # =========================================================================
+
     
     print("Fetching the latest posts globally from the blockchain history...")
 
