@@ -1,4 +1,4 @@
-name: Steem Daily Posting Bot
+name: Blockchain Upvote Bot
 
 on:
   workflow_dispatch: # Allows manual trigger execution button in GitHub
@@ -21,7 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install beem requests
 
-      - name: Run Daily Posting Bot
+      - name: Find a valid post and upvote it
         env:
           STEEM_POSTING_KEY: ${{ secrets.STEEM_POSTING_KEY }}
         run: python post_bot.py
