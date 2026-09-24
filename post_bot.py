@@ -1,9 +1,19 @@
 import os
 import random
+import time
 from datetime import datetime, timezone
 from beem import Steem
 from beem.comment import Comment
 from beem.discussions import Discussions_by_created
+
+# =========================================================================
+# INITIAL RAMP-UP VARIANCE DELAY (60 seconds to 15 minutes)
+# =========================================================================
+# 60 seconds = 1 minute | 900 seconds = 15 minutes
+delay_seconds = random.randint(60, 900)
+print(f"[DELAY LOGIC] Sleeping for {delay_seconds} seconds ({delay_seconds / 60:.1f} minutes) before starting script...")
+time.sleep(delay_seconds)
+print("[DELAY LOGIC] Delay cleared. Initializing Steem interaction.")
 
 # 1. Configuration
 MY_ACCOUNT = "blog.god"            # Your Steem account name
@@ -14,7 +24,6 @@ AGE_THRESHOLD_SECONDS = random_minutes * 60
 print(f"Looking for posts older than {random_minutes:.1f} minutes but younger than 25.0 minutes.")
 
 # TARGET_TAGS: The script will only look at posts containing any of these tags
-# Tip: Use lowercase names as tags are indexed in lowercase format
 TARGET_TAGS = ["steemitchallenge", "newcomers", "creativity", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
 
 # 2. Extract Key from GitHub Secrets
@@ -53,12 +62,8 @@ try:
         exit(0)
     # =========================================================================
 
-    
     print("Fetching the latest posts globally from the blockchain history...")
 
-    
-    # We increase the history batch slightly (limit: 50) to make sure we find 
-    # posts that match both our age constraint AND our custom tags
     query = {"limit": 70, "tag": ""}
     discussions = Discussions_by_created(query, blockchain_instance=stm)
     
@@ -70,17 +75,14 @@ try:
         identifier = f"@{author}/{permlink}"
         
         # --- TAG FILTER LOGIC ---
-        # Metadata contains the tags array assigned by the author
         post_tags = post.get("tags", [])
         
-        # Check if there is an intersection between target tags and post tags
         matching_tags = [t for t in post_tags if t.lower() in TARGET_TAGS]
         
         if not matching_tags:
-            # Skip this post silently if it doesn't match our specific tags
             continue
             
-        # Calculate the post age dynamically (using aware UTC datetimes)
+        # Calculate the post age dynamically
         post_creation = post.get("created")
         if not post_creation:
             continue
@@ -91,7 +93,6 @@ try:
         now = datetime.now(timezone.utc)
         age_seconds = (now - post_creation).total_seconds()
         
-        # 1. Check if the post meets your age condition (> 5.3 minutes)
         if age_seconds < AGE_THRESHOLD_SECONDS:
             print(f"Skipping {identifier}: Matches tags {matching_tags} but is too new ({age_seconds / 60:.1f} mins old).")
             continue
@@ -115,7 +116,7 @@ try:
         print("Upvote successfully broadcasted.")
         
         upvote_done = True
-        break  # Exit the script after one successful upvote event
+        break  
 
     if not upvote_done:
         print("No posts matching your target tags and age threshold were found in this history batch.")
