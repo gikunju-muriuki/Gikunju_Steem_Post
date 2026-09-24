@@ -24,7 +24,7 @@ AGE_THRESHOLD_SECONDS = random_minutes * 60
 print(f"Looking for posts older than {random_minutes:.1f} minutes but younger than 25.0 minutes.")
 
 # TARGET_TAGS: The script will only look at posts containing any of these tags
-TARGET_TAGS = ["steemitchallenge", "newcomers", "creativity", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
+TARGET_TAGS = ["xrp", "solana", "usdt", "blockchain", "trading", "steemitchallenge", "newcomers", "creativity", "steemexclusive", "art", "newcomer", "nigeria", "krsuccess", "creative", "trading", "bitcoin", "blog", "creative", "crypto", "steem", "photography", "game"]
 
 # 2. Extract Key from GitHub Secrets
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
