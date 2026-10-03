@@ -17,7 +17,7 @@ print("[DELAY LOGIC] Delay cleared. Initializing Steem interaction.")
 
 # 1. Configuration
 MY_ACCOUNT = "blog.god"            # Your Steem account name
-VOTE_WEIGHT = 1                   # Strategically hardcoded to 3% for high-volume growth
+VOTE_WEIGHT = 50                   # Strategically hardcoded to 3% for high-volume growth
 PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 random_minutes = random.uniform(5.1, 25.0)
 AGE_THRESHOLD_SECONDS = random_minutes * 60
