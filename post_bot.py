@@ -12,7 +12,7 @@ from beem.discussions import Discussions_by_created
 MY_ACCOUNT = "blog.god"
 VOTE_WEIGHT = 100.0               # Full 100% weight to clear dust thresholds (~10 votes/day)
 MIN_VP_THRESHOLD = 65.0           # Keeps VP regenerating near peak efficiency
-MIN_RC_THRESHOLD = 83.0
+MIN_RC_THRESHOLD = 85.3
 
 # Wider post age window (in minutes)
 MIN_POST_AGE_MINS = 5.0
