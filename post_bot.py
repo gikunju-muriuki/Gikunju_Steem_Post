@@ -32,10 +32,11 @@ BLACKLIST = {MY_ACCOUNT}
 
 # Fast failover node list (skips slow NodeList network benchmark)
 NODES = [
-    "https://steem-proxy.gikunju.workers.dev",
-    "https://api.justyy.com",
-    "https://api.steem.fans",
     "https://api.moecki.online",
+    "https://api.campingclub.me",
+    "https://api2.justyy.com",
+    "https://api3.justyy.com",
+    "https://steem-proxy.gikunju.workers.dev"
 ]
 
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
