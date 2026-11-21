@@ -17,7 +17,7 @@ MIN_RC_THRESHOLD = 83.0
 # Optimal post age window (in minutes):
 # Clears the 5-minute reverse-auction penalty while beating late whale votes
 MIN_POST_AGE_MINS = 5.3
-MAX_POST_AGE_MINS = 6.3
+MAX_POST_AGE_MINS = 9.3
 
 # Skip posts that ALREADY received a big whale vote (you want to be BEFORE them)
 MAX_EXISTING_PAYOUT_SBD = 0.30
