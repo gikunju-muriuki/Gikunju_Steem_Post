@@ -14,19 +14,18 @@ VOTE_WEIGHT = 100.0               # Full 100% weight to clear dust thresholds (~
 MIN_VP_THRESHOLD = 65.0           # Keeps VP regenerating near peak efficiency
 MIN_RC_THRESHOLD = 83.0
 
-# Optimal post age window (in minutes):
-# Clears the 5-minute reverse-auction penalty while beating late whale votes
-MIN_POST_AGE_MINS = 5.3
-MAX_POST_AGE_MINS = 9.3
+# Wider post age window (in minutes)
+MIN_POST_AGE_MINS = 5.0
+MAX_POST_AGE_MINS = 7.0
 
 # Skip posts that ALREADY received a big whale vote (you want to be BEFORE them)
 MAX_EXISTING_PAYOUT_SBD = 0.30
 
-# High-value communities & tags actively curated by @booming / @steemcurator accounts
-TARGET_TAGS = {
-    "steemexclusive", "thediarygame", "bangla", "burnsteem25",
-    "club5050", "club75", "club100", "newcomers", "kr", "crypto", "krsuccess", "nigeria"
-}
+# Minimum word count floor
+MIN_WORD_COUNT = 15
+
+# How many recent posts to scan
+FETCH_LIMIT = 400
 
 BLACKLIST = {MY_ACCOUNT}
 
@@ -36,7 +35,7 @@ NODES = [
     "https://api.campingclub.me",
     "https://api2.justyy.com",
     "https://api3.justyy.com",
-    "https://steem-proxy.gikunju.workers.dev"
+    "https://steem-proxy.gikunju.workers.dev",
 ]
 
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
@@ -63,52 +62,92 @@ try:
         print(f"Safety Halt: RC ({current_rc:.2f}%) below {MIN_RC_THRESHOLD}%.")
         exit(0)
 
-    # 3. Fetch Recent Posts
-    discussions = Discussions_by_created({"limit": 100, "tag": ""}, blockchain_instance=stm)
+    # 3. Fetch Recent Posts (with fallback if a node caps query limit below 400)
+    posts = []
+    for limit_try in (FETCH_LIMIT, 200, 100):
+        try:
+            discussions = Discussions_by_created(
+                {"limit": limit_try, "tag": ""}, blockchain_instance=stm
+            )
+            if discussions is not None:
+                posts = list(discussions)
+                if posts:
+                    print(f"Fetched {len(posts)} posts (requested limit={limit_try}).")
+                    break
+        except Exception as fetch_err:
+            print(f"Warning: Fetch with limit={limit_try} failed: {fetch_err}")
+
+    if not posts:
+        print("No posts returned from blockchain query.")
+        exit(0)
+
     now = datetime.now(timezone.utc)
     candidates = []
 
-    for post in discussions:
-        author = post.get("author")
-        permlink = post.get("permlink")
-        if not author or not permlink or author in BLACKLIST:
+    stats = {
+        "fetched": len(posts),
+        "in_age_window": 0,
+        "skipped_blacklisted": 0,
+        "skipped_age": 0,
+        "skipped_payout": 0,
+        "skipped_short": 0,
+        "skipped_already_voted": 0,
+    }
+
+    for post in posts:
+        if not post:
             continue
 
-        # Check age window strictly (both min AND max age)
+        author = post.get("author")
+        permlink = post.get("permlink")
+        if not author or not permlink:
+            continue
+
+        if author in BLACKLIST:
+            stats["skipped_blacklisted"] += 1
+            continue
+
         created = post.get("created")
         if not created:
+            stats["skipped_age"] += 1
             continue
         if created.tzinfo is None:
             created = created.replace(tzinfo=timezone.utc)
 
         age_mins = (now - created).total_seconds() / 60.0
         if age_mins < MIN_POST_AGE_MINS or age_mins > MAX_POST_AGE_MINS:
+            stats["skipped_age"] += 1
             continue
 
-        # Skip if a whale has already voted on it
-        pending_payout = float(post.get("pending_payout_value", 0))
+        stats["in_age_window"] += 1
+
+        pending_payout = float(post.get("pending_payout_value", 0) or 0)
         if pending_payout > MAX_EXISTING_PAYOUT_SBD:
+            stats["skipped_payout"] += 1
             continue
 
-        # Check spam / quality length (at least 120 words for curated posts)
         body = post.get("body", "")
         word_count = len(body.split()) if body else 0
-        if word_count < 120:
+        if word_count < MIN_WORD_COUNT:
+            stats["skipped_short"] += 1
             continue
 
-        # Check if already voted
         voters = [v["voter"] for v in post.get("active_votes", []) if "voter" in v]
         if MY_ACCOUNT in voters:
+            stats["skipped_already_voted"] += 1
             continue
 
-        # Match against target tags (any non-blacklisted author)
-        post_tags = {t.lower() for t in post.get("tags", [])}
-        matching_tags = post_tags.intersection(TARGET_TAGS)
+        candidates.append((age_mins, f"@{author}/{permlink}", word_count, pending_payout))
 
-        if not matching_tags:
-            continue
-
-        candidates.append((age_mins, f"@{author}/{permlink}", list(matching_tags)))
+    print(
+        f"[DIAGNOSTICS] Fetched: {stats['fetched']} | "
+        f"In {MIN_POST_AGE_MINS}-{MAX_POST_AGE_MINS}m window: {stats['in_age_window']} | "
+        f"Candidates: {len(candidates)} | "
+        f"Skipped -> age: {stats['skipped_age']}, payout: {stats['skipped_payout']}, "
+        f"short(<{MIN_WORD_COUNT}w): {stats['skipped_short']}, "
+        f"already_voted: {stats['skipped_already_voted']}, "
+        f"blacklisted: {stats['skipped_blacklisted']}"
+    )
 
     if not candidates:
         print(
@@ -116,11 +155,11 @@ try:
         )
         exit(0)
 
-    # Pick a random post among all valid matching candidates
-    chosen_age, chosen_id, chosen_tags = random.choice(candidates)
+    chosen_age, chosen_id, chosen_words, chosen_payout = random.choice(candidates)
 
     print(
-        f"Voting on {chosen_id} | Pool size: {len(candidates)} | Age: {chosen_age:.1f}m | Tags: {chosen_tags}"
+        f"Voting on {chosen_id} | Pool size: {len(candidates)} | "
+        f"Age: {chosen_age:.1f}m | Words: {chosen_words} | Payout: ${chosen_payout:.3f}"
     )
     target_comment = Comment(chosen_id, blockchain_instance=stm)
     target_comment.upvote(weight=VOTE_WEIGHT, voter=MY_ACCOUNT)
