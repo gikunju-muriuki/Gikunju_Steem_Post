@@ -16,7 +16,7 @@ MIN_RC_THRESHOLD = 83.0
 
 # Wider post age window (in minutes)
 MIN_POST_AGE_MINS = 5.0
-MAX_POST_AGE_MINS = 5.3
+MAX_POST_AGE_MINS = 6.0
 
 # Skip posts that ALREADY received a big whale vote (you want to be BEFORE them)
 MAX_EXISTING_PAYOUT_SBD = 0.30
